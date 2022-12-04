@@ -1,7 +1,146 @@
-$bg-color: #000;
-$color: #fff;
+@import "breakpoints";
+@import "colors";
+@import "fonts";
+@import "resets";
+
+:root {
+	--default-inline-padding: 1em;
+}
+
+.btn-solid,
+.btn-hollow {
+	text-decoration: none;
+	cursor: pointer;
+	border-radius: 0.9em;
+	display: inline-block;
+}
+
+.btn-solid {
+	background-color: var(--clr-primary-title);
+	color: var(--clr-body);
+	padding: 0.9em 1.6em;
+}
+
+.btn-hollow {
+	padding: 0.9em 1.6em;
+	width: 100%;
+	border: 1px solid var(--clr-primary-title);
+}
 
 body {
-	background-color: $bg-color;
-	color: $color;
+	background-color: var(--clr-body);
+	color: var(--clr-primary);
+	font-family: var(--ff-primary);
+	font-weight: 400;
+}
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 1.3em var(--default-inline-padding);
+}
+
+.header {
+	// border: 1px solid red;
+}
+
+.hamburger__icon {
+	margin-left: auto;
+}
+
+.hamburger__menu {
+	padding: 1.3em var(--default-inline-padding);
+	background-color: var(--clr-body);
+	height: 100%;
+	width: 65%;
+
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+
+	opacity: 0;
+	pointer-events: none;
+
+	&-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		display: flex;
+		flex-direction: column;
+		gap: 0.8em;
+
+		& a {
+			text-decoration: none;
+			color: var(--clr-primary);
+		}
+	}
+
+	&-login-container {
+		& ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			text-align: center;
+
+			display: flex;
+			flex-direction: column;
+			gap: 0.8em;
+		}
+
+		& a {
+			text-decoration: none;
+			color: var(--clr-primary);
+			font-size: var(--fs-200);
+		}
+	}
+}
+
+.hamburger-container {
+	cursor: pointer;
+
+	&.active .hamburger__menu {
+		opacity: 1;
+		pointer-events: auto;
+	}
+}
+
+.hero {
+	&__content {
+		margin-block-start: 2.3em;
+		padding-inline: var(--default-inline-padding);
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		text-align: center;
+	}
+
+	&__title {
+		color: var(--clr-primary-title);
+		font-size: var(--fs-700);
+	}
+
+	&__desc {
+		line-height: 1.8;
+	}
+
+	&__icons {
+		margin-block: 1.3em;
+	}
+
+	&__icons-list {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		display: flex;
+		gap: 2em;
+		justify-content: space-between;
+		align-items: center;
+	}
 }
