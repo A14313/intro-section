@@ -1,0 +1,1 @@
+{"mappings":"AAGA","sources":["src/scss/main.scss"],"sourcesContent":["$bg-color: #000;\n$color: #fff;\n\nbody {\n\tbackground-color: $bg-color;\n\tcolor: $color;\n}\n"],"names":[],"version":3,"file":"index.b10d73a7.css.map","sourceRoot":"/__parcel_source_root/"}

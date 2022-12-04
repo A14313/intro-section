@@ -1,0 +1,25 @@
+{
+	"name": "intro-section",
+	"version": "1.0.0",
+	"description": "Intro section with dropdown navigation - Challenge from Frontendmentor.io",
+	"scripts": {
+		"start": "parcel src/*.html --open",
+		"build": "parcel build src/*.html --public-url ./"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/A14313/intro-section.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/A14313/intro-section/issues"
+	},
+	"homepage": "https://github.com/A14313/intro-section#readme",
+	"devDependencies": {
+		"@parcel/transformer-sass": "^2.8.0",
+		"parcel": "^2.8.0",
+		"sass": "^1.56.1"
+	}
+}
