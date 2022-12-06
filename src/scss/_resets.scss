@@ -40,6 +40,13 @@ body {
 /* A elements that don't have a class get default styles */
 a:not([class]) {
 	text-decoration-skip-ink: auto;
+
+	color: var(--clr-primary);
+	transition: color var(--transition-speed-normal) ease;
+
+	&:hover {
+		color: var(--clr-primary-title);
+	}
 }
 
 /* Make images easier to work with */
