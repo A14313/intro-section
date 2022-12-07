@@ -90,6 +90,10 @@ body {
 	font-weight: 400;
 }
 
+.header {
+	// border: 1px solid red;
+}
+
 .nav {
 	display: flex;
 	justify-content: space-between;
@@ -97,11 +101,63 @@ body {
 
 	padding: 1.3em var(--default-inline-padding);
 
+	@include mediaQuery(med) {
+		padding: 1.3em 0;
+		width: 95%;
+		max-width: 1200px;
+		margin-inline: auto;
+	}
+
 	&--desktop {
 		display: none;
 
 		@include mediaQuery(med) {
-			display: block;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 85%;
+		}
+	}
+
+	&__list {
+		@include mediaQuery(med) {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			display: flex;
+			gap: 3em;
+		}
+	}
+
+	&__link {
+		@include mediaQuery(med) {
+			color: var(--clr-primary);
+			text-decoration: none;
+			transition: color var(--transition-speed-normal) ease;
+
+			&:hover {
+				color: var(--clr-primary-title);
+			}
+		}
+	}
+
+	&--desktop-login-container {
+		// display: none;
+		& ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			display: flex;
+			align-items: center;
+			gap: 1.8em;
+		}
+
+		& a {
+			text-decoration: none;
+			color: var(--clr-primary);
+			font-size: var(--fs-200);
 		}
 	}
 }
@@ -261,9 +317,10 @@ body {
 		justify-content: space-between;
 		grid-auto-columns: 1fr;
 		height: 70vh;
-		width: 80%;
+		width: 90%;
 		max-width: 1200px;
 		margin-inline: auto;
+		// border: 1px solid red;
 	}
 
 	@include mediaQuery(lrg) {
@@ -315,6 +372,7 @@ body {
 			@include mediaQuery(med) {
 				text-align: start;
 				margin-block-start: 0;
+				margin-inline: var(--default-inline-padding) + 2rem;
 				padding-inline: 0;
 				width: 90%;
 				max-width: 400px;
