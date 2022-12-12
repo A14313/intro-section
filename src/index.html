@@ -7,6 +7,7 @@
 		<title>Intro section</title>
 		<link rel="stylesheet" href="scss/main.scss" />
 		<script src="js/toggle.js" type="module" defer></script>
+		<script src="js/dropdown.js" type="module" defer></script>
 	</head>
 	<body>
 		<header class="header">
@@ -96,32 +97,91 @@
 						</div>
 					</div>
 				</div>
-				<div class="nav--desktop">
-					<ul class="nav__list">
-						<li class="nav__item">
-							<a class="nav__link with-arrow" href="#"
-								>Features</a
+				<div class="nav-desktop">
+					<div class="nav__primary">
+						<div class="dropdown" data-dropdown>
+							<button
+								class="nav__link"
+								with-arrow
+								data-dropdown-button
 							>
-						</li>
-						<li class="nav__item">
-							<a class="nav__link with-arrow" href="#">Company</a>
-						</li>
-						<li class="nav__item">
-							<a class="nav__link" href="#">Careers</a>
-						</li>
-						<li class="nav__item">
-							<a class="nav__link" href="#">About</a>
-						</li>
-					</ul>
-					<div class="nav--desktop-login-container">
-						<ul>
-							<li>
-								<a href="#">Login</a>
-							</li>
-							<li>
-								<a class="btn-hollow" href="#">Register</a>
-							</li>
-						</ul>
+								Features
+							</button>
+							<div class="dropdown__menu">
+								<ul class="dropdown__menu--list">
+									<li class="dropdown__menu--item">
+										<img
+											src="images/icon-todo.svg"
+											alt="Todo List"
+										/>
+										<a class="dropdown__menu--link" href="#"
+											>Todo List</a
+										>
+									</li>
+									<li class="dropdown__menu--item">
+										<img
+											src="images/icon-calendar.svg"
+											alt="Calendar"
+										/>
+										<a class="dropdown__menu--link" href="#"
+											>Calendar</a
+										>
+									</li>
+									<li class="dropdown__menu--item">
+										<img
+											src="images/icon-reminders.svg"
+											alt="Reminders"
+										/>
+										<a class="dropdown__menu--link" href="#"
+											>Reminders</a
+										>
+									</li>
+									<li class="dropdown__menu--item">
+										<img
+											src="images/icon-planning.svg"
+											alt="Planning"
+										/>
+										<a class="dropdown__menu--link" href="#"
+											>Planning</a
+										>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="dropdown" data-dropdown>
+							<button
+								class="nav__link"
+								with-arrow
+								data-dropdown-button
+							>
+								Company
+							</button>
+							<div class="dropdown__menu">
+								<ul class="dropdown__menu--list">
+									<li class="dropdown__menu--item">
+										<a class="dropdown__menu--link" href="#"
+											>History</a
+										>
+									</li>
+									<li class="dropdown__menu--item">
+										<a class="dropdown__menu--link" href="#"
+											>Our Team</a
+										>
+									</li>
+									<li class="dropdown__menu--item">
+										<a class="dropdown__menu--link" href="#"
+											>Blog</a
+										>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<a class="nav__link" href="#">Careers</a>
+						<a class="nav__link" href="#">About</a>
+					</div>
+					<div class="nav__secondary">
+						<a class="nav__link" href="#">Login</a>
+						<a class="btn-hollow" href="#">Register</a>
 					</div>
 				</div>
 			</nav>
