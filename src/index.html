@@ -10,6 +10,15 @@
 		<script src="js/dropdown.js" type="module" defer></script>
 	</head>
 	<body>
+		<div class="viewport-checker">
+			<div class="container">
+				<h1>This current screen size is unsupported</h1>
+				<p>
+					Please view this website with at least 320 screen
+					resolution.
+				</p>
+			</div>
+		</div>
 		<header class="header">
 			<nav class="nav">
 				<div class="logo">
@@ -30,70 +39,104 @@
 						/>
 					</div>
 					<div class="hamburger__menu">
-						<ul class="hamburger__menu-list">
-							<li>
-								<a class="with-arrow" href="#">Features</a>
-								<ul class="hamburger__menu-list-inner">
-									<li class="hamburger__menu-item-inner">
-										<img
-											src="images/icon-todo.svg"
-											alt="To do list"
-										/>
-										<a href="#">To do list</a>
-									</li>
-									<li class="hamburger__menu-item-inner">
-										<img
-											src="images/icon-calendar.svg"
-											alt="Calendar"
-										/>
-										<a href="#">Calendar</a>
-									</li>
-									<li class="hamburger__menu-item-inner">
-										<img
-											src="images/icon-reminders.svg"
-											alt="Reminders"
-										/>
-										<a href="#">Reminders</a>
-									</li>
-									<li class="hamburger__menu-item-inner">
-										<img
-											src="images/icon-planning.svg"
-											alt="Planning"
-										/>
-										<a href="#">Planning</a>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<a class="with-arrow" href="#">Company</a>
-								<ul class="hamburger__menu-list-inner">
-									<li class="hamburger__menu-item-inner">
-										<a href="#">History</a>
-									</li>
-									<li class="hamburger__menu-item-inner">
-										<a href="#">Our Team</a>
-									</li>
-									<li class="hamburger__menu-item-inner">
-										<a href="#">Blog</a>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<a href="#">Careers</a>
-							</li>
-							<li>
-								<a href="#">About</a>
-							</li>
-						</ul>
-						<div class="hamburger__menu-login-container">
-							<ul>
-								<li>
-									<a href="#">Login</a>
-								</li>
-								<li>
-									<a class="btn-hollow" href="#">Register</a>
-								</li>
-							</ul>
+						<div class="nav__primary">
+							<div class="dropdown" data-dropdown>
+								<button
+									class="nav__link"
+									with-arrow
+									data-dropdown-button
+								>
+									Features
+								</button>
+								<div class="dropdown__menu">
+									<ul class="dropdown__menu--list">
+										<li class="dropdown__menu--item">
+											<img
+												src="images/icon-todo.svg"
+												alt="Todo List"
+											/>
+											<a
+												class="dropdown__menu--link"
+												href="#"
+												>Todo List</a
+											>
+										</li>
+										<li class="dropdown__menu--item">
+											<img
+												src="images/icon-calendar.svg"
+												alt="Calendar"
+											/>
+											<a
+												class="dropdown__menu--link"
+												href="#"
+												>Calendar</a
+											>
+										</li>
+										<li class="dropdown__menu--item">
+											<img
+												src="images/icon-reminders.svg"
+												alt="Reminders"
+											/>
+											<a
+												class="dropdown__menu--link"
+												href="#"
+												>Reminders</a
+											>
+										</li>
+										<li class="dropdown__menu--item">
+											<img
+												src="images/icon-planning.svg"
+												alt="Planning"
+											/>
+											<a
+												class="dropdown__menu--link"
+												href="#"
+												>Planning</a
+											>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="dropdown" data-dropdown>
+								<button
+									class="nav__link"
+									with-arrow
+									data-dropdown-button
+								>
+									Company
+								</button>
+								<div class="dropdown__menu">
+									<ul class="dropdown__menu--list">
+										<li class="dropdown__menu--item">
+											<a
+												class="dropdown__menu--link"
+												href="#"
+												>History</a
+											>
+										</li>
+										<li class="dropdown__menu--item">
+											<a
+												class="dropdown__menu--link"
+												href="#"
+												>Our Team</a
+											>
+										</li>
+										<li class="dropdown__menu--item">
+											<a
+												class="dropdown__menu--link"
+												href="#"
+												>Blog</a
+											>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<a class="nav__link" href="#">Careers</a>
+							<a class="nav__link" href="#">About</a>
+						</div>
+						<div class="nav__secondary">
+							<a class="nav__link" href="#">Login</a>
+							<a class="btn-hollow" href="#">Register</a>
 						</div>
 					</div>
 				</div>
