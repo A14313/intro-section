@@ -17,7 +17,7 @@ This is my solution to the Challenge.
 
 ### Links
 
--   [Solution URL](#)
+-   [Solution URL](https://www.frontendmentor.io/solutions/intro-section-with-dropdown-navigation-K0pbiZGoV0)
 
 -   [Live Site URL](https://a14313.github.io/intro-section/dist/)
 
